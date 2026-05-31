@@ -1,0 +1,32 @@
+import numpy as np
+# adjust the return matrix values as needed
+def result():
+    b1 = np.array([1, 2, -2]) / 3
+    b2 = np.array([0, 1, 1]) / np.sqrt(2)
+    b3 = np.array([4, -1, 1]) / (3*np.sqrt(2))
+    b = np.array([b1, b2, b3])
+    f1 = np.array([3, -2, np.sqrt(3)]) / 4
+    f2 = np.array([-1, 0, np.sqrt(3)]) / 2
+    f3 = np.array([np.sqrt(3), 2*np.sqrt(3), 1]) / -4
+    f = np.array([f1, f2, f3])
+
+    BF = b @ f.transpose()
+    return BF
+
+
+print(result())
+
+
+# %%
+
+import numpy as np
+
+def result1():
+       b1 = np.array([1, 2, -2]) / 3
+       b2 = np.array([0, 1, 1]) / np.sqrt(2)
+       b3 = np.array([4, -1, 1]) / (3*np.sqrt(2))
+       b = np.array([b1, b2, b3])
+
+       BF = b
+
+       return BF
