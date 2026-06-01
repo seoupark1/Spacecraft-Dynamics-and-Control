@@ -10,3 +10,4 @@ Each notebook includes the original quiz problems (images), implemented algorith
 | :--- | :--- | :---: |
 | **Quiz 1** | Direction Cosine Matrix (DCM) | [Open in Colab](https://colab.research.google.com/github/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/Course_01_Kinematics/Source/quiz1_DCM.ipynb) |
 | **Quiz 2** | Kinematic Differential equation | [Open in Colab](https://colab.research.google.com/github/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/Course_01_Kinematics/Source/quiz2_DCM_differential.ipynb) |
+| **Quiz 3** | Euler Angle and DCM Relation | [Open in Colab](https://colab.research.google.com/github/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/Course_01_Kinematics/Source/quiz3_EA_and_DCM_Relation.ipynb) |
