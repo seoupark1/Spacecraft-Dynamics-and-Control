@@ -14,3 +14,5 @@ Each notebook includes the original quiz problems (images), implemented algorith
 | **Quiz 4** | Euler Angle Addition & Subtraction | [Open in Colab](https://colab.research.google.com/github/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/Course_01_Kinematics/Source/quiz4_EA_Addition.ipynb) |
 | **Quiz 5** | EA differential Kinematic Equations | [Open in Colab](https://colab.research.google.com/github/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/Course_01_Kinematics/Source/quiz5_EA_differential.ipynb) |
 | **Quiz 6** | Euler Parameter Relationship to DCM | [Open in Colab](https://colab.research.google.com/github/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/Course_01_Kinematics/Source/quiz6_EP_to_DCM.ipynb) |
+| **Quiz 7** | Euler Parameter Addition | [Open in Colab](https://colab.research.google.com/github/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/Course_01_Kinematics/Source/quiz6_EP_Addition.ipynb) |
+
