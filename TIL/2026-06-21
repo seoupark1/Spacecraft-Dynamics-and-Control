@@ -1,0 +1,28 @@
+### [2026-06-21] OLAE와 kinematics final assignment 해결
+<br>
+
+**1. GNC Theory (이론 및 수식)**
+
+**Problem:** OLAE에서 tilde의 역행렬이 존재하지 않아 CRP로 변환하는 과정에서 문제가 발생함.
+
+**Resolution:** Least Square로 3by3 대칭 행렬을 만들어 해결함.
+
+**Insight:** OLAE는 Wahba's problem의 cost function을 사용하지 않고, cayley transform을 통해 단순 linear algebra 문제로 변형해 접근한다. 
+<br>
+<br>
+**2. Code Implementation (코드 구현)**
+
+**Problem:** 없음
+
+**Resolution:** 없음
+
+**Insight:** 없음
+<br>
+<br>
+**3. Architecture & Workflow (아키텍처 및 룰)**
+
+**Problem:** 없음
+
+**Resolution:** 없음
+
+**Insight:** 없음
