@@ -1,5 +1,13 @@
 import numpy as np
 
+def tilde(v):
+    v = np.array(v).flatten()
+    result = np.array([[0, -v[2], v[1]],
+                       [v[2], 0, -v[0]],
+                       [-v[1], v[0], 0]])
+
+    return result
+
 # (3-2-1) Euler Angles to Direction Cosine Matrix
 def EA2C_321(EA_angles_deg):
     # deg to rad
