@@ -1,5 +1,9 @@
 # Spacecraft-Dynamics-and-Control
 
+## 📝 Quiz 03 - Problem 1
+![problem 1](https://github.com/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/assets/images/course02/quiz03_prob1.png?raw=true)
+
+!wget -O utils_kinematics.py https://raw.githubusercontent.com/seoupark1/Spacecraft-Dynamics-and-Control/main/utils/utils_kinematics.py
 
 [TODO]
 <br>
