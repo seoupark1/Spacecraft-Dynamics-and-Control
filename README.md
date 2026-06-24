@@ -1,10 +1,5 @@
 # Spacecraft-Dynamics-and-Control
 
-## 📝 Quiz 03 - Problem 1
-![problem 1](문제사진https://github.com/seoupark1/Spacecraft-Dynamics-and-Control/blob/main/assets/images/course02/quiz03_prob1.png?raw=true)
-
-!wget -O utils_kinematics.py https://raw.githubusercontent.com/seoupark1/Spacecraft-Dynamics-and-Control/main/utils/utils_kinematics.py
-
 [TODO]
 <br>
 1. [course01] quiz10, quiz13 .m 파일의 문제사진 폴더 하나 만들어서 거기다가 넣기
