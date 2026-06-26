@@ -4,6 +4,7 @@
 <br>
 1. [course01] quiz10, quiz13 .m 파일의 문제사진 폴더 하나 만들어서 거기다가 넣기
 2. [course01] README 작성, handwritten-notes 파일 어도비로 스캔해서 올리기, docs를 그대로 둘지 아니면 docs 제거하고 handwritten-notes만 둘지 고민
-3. handwritten-notes에는 각 course의 final assignment도 pdf로 올릴 것
+3. handwritten-notes에는 각 course의 final assignment을 별도의 pdf 파일로 올릴 것
 4. assets에는 images 뿐만 아니라 이후 최종 과제의 gif도 저장할 수 있으니 우선 그대로 둘 것.
-5. [course02] coding 하는 quiz가 별로 없어서 quizzes 폴더가 부실해보임. 수식 유도하는 과정 등 노트에 적은 내용들을 스캔해서 pdf 파일로 추가할까?
+5. [course02] coding 하는 quiz가 별로 없어서 quizzes 폴더가 부실해보임. 노트에 직접 문제 푸는 퀴즈라도 스캔해서 pdf 파일로 업로드하는 것이 맞다.
+6. 
