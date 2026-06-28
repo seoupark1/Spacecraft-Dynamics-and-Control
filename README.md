@@ -9,5 +9,5 @@
 5. [course02] 노트에 직접 푸는 concept check도 퀴즈에 ipynb 파일로 업로드. 코드 없이 사진만 나열할 것.
 6. [course02] kinetic energy - quiz05, equations of motion - quiz06, torque free motion general inertia - quiz07, integrals of motion - quiz08, precession - quiz09
 7. [course02] torque free motion general inertia 퀴즈 다시 깔끔하게 정리해서 풀기.
-8. [course02] dual spinner equations of motion no external torque w3_dot에 대한 식에서 부호 잘못된 오타. torque free motion general inertia 퀴즈 문제 7번에 a의 세제곱 오타.
+8. [course02] dual spinner equations of motion no external torque w3_dot에 대한 식에서 부호 잘못된 오타(-가 아니라 +). torque free motion general inertia 퀴즈 문제 7번에 a의 세제곱 오타(그냥 제곱이 답).
 9. 
