@@ -11,3 +11,4 @@
 7. [course02] dual spinner equations of motion no external torque w3_dot에 대한 식에서 부호 잘못된 오타(-가 아니라 +). torque free motion general inertia 퀴즈 문제 7번에 a의 세제곱 오타(그냥 제곱이 답).
 8. course02까지 수강한 후, course01부터 handwritten notes 스캔해서 올리기. 파일 하나의 기준은 모듈 내부의 구분된 섹션 기준 pdf 하나. pdf 파일을 다운로드 받지 않고 깃허브에서 미리보기 가능한지 알아보기. 추가로 각 course에서 사용한 skills과 수강하면서 사용 가능하게 된 능력. 예를 들어, 'stability를 판단할 때 linearization을 통해 EOM을 간단하게 만든 후, 복원력 항이 양수가 되어야 한다고 가정해서 condition을 구할 수 있음' 처럼 적기.
 9. [course03] 넘어가기 전에, 각 quiz에서 사용한 utils_kinematics 함수로 만들어서 업로드하기. utils는 상관없는데 course03에서 코드를 사용하게 된다면 class를 사용하는 객체 기반 프로그래밍 사용하기.
+10. kinematics_transformation에서 Attitude class 다시 수정, principal inertia를 반환하는 함수는 utils 안에 다른 파일을 만들어서 거기다가 저장. course02의 마지막 퀴즈 두개를 수정해야함.
