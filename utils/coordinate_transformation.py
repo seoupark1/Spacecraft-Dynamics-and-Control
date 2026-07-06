@@ -1,19 +1,18 @@
 import numpy as np
 
+def tilde_matrix(v):
+    v = np.array(v).flatten()
+    result = np.array([[0, -v[2], v[1]],
+                    [v[2], 0, -v[0]],
+                    [-v[1], v[0], 0]])
+
+    return result
+
 class Attitude:
     
     # the most fundamental attitude coordinate 
     def __init__(self, dcm):
         self.dcm = dcm
-
-    @staticmethod
-    def tilde_matrix(v):
-        v = np.array(v).flatten()
-        result = np.array([[0, -v[2], v[1]],
-                        [v[2], 0, -v[0]],
-                        [-v[1], v[0], 0]])
-
-        return result
 
     @classmethod
     # (3-2-1) Euler Angles to Directional Cosine Matrix
@@ -149,7 +148,7 @@ class Attitude:
     @classmethod
     # Classical Rodrigues Parameters to Directional Cosine Matrix
     def from_crp(cls, q):
-        dcm = ((1 - np.vdot(q, q)) * np.eye(3) + 2 * np.outer(q, q) - 2 * cls.tilde_matrix(q)) / (1 + np.vdot(q, q))
+        dcm = ((1 - np.vdot(q, q)) * np.eye(3) + 2 * np.outer(q, q) - 2 * tilde_matrix(q)) / (1 + np.vdot(q, q))
 
         return cls(dcm)
     
@@ -169,7 +168,7 @@ class Attitude:
     @classmethod
     # Modified Rodrigues Parameters to Directional Cosine Matrix
     def from_mrp(cls, sigma):
-        dcm = (np.eye(3) + (8 * cls.tilde_matrix(sigma) @ cls.tilde_matrix(sigma) - 4 * (1 - np.vdot(sigma,sigma)) * cls.tilde_matrix(sigma)) / (1 + np.vdot(sigma,sigma))**2)
+        dcm = (np.eye(3) + (8 * tilde_matrix(sigma) @ tilde_matrix(sigma) - 4 * (1 - np.vdot(sigma,sigma)) * tilde_matrix(sigma)) / (1 + np.vdot(sigma,sigma))**2)
 
         return cls(dcm)
     
@@ -185,24 +184,3 @@ class Attitude:
         mrp = self.dcm_to_mrp(self.dcm)
 
         return mrp
-
-
-
-# Principal Inertias (descending order) & Corresponding DCM
-def coordinate_transform(Ic_B):
-    # get eigenvalues & eigenvectors
-    eig_vals, eig_vecs = np.linalg.eigh(Ic_B)
-
-    # change eigenvalue's index
-    I_min, I_med, I_max = eig_vals[0], eig_vals[1], eig_vals[2]
-    eig_vals = np.array([I_max, I_med, I_min])
-
-    # change eigenvector's index & make [FB]
-    v_min, v_med, v_max = eig_vecs[:, 0], eig_vecs[:, 1], eig_vecs[:, 2]
-    dcm_FB = np.array([v_max, v_med, v_min])
-
-    # if dcm_FB's det = -1, change it to follow right-handed rule
-    if np.linalg.det(dcm_FB) < 0:
-        dcm_FB[2, :] = -dcm_FB[2, :]
-
-    return eig_vals, dcm_FB
