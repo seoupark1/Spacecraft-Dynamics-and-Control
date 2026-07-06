@@ -1,11 +1,11 @@
 # TIL (Today I Learned)
 
-이 저장소는 우주선 자세 제어(Attitude Control) 역학과 파이썬 비행 소프트웨어 아키텍처 학습 기록을 담고 있습니다.
+당일 학습한 내용과 해결과정을 개념, 코드, 아키텍쳐의 3가지 분류로 정리한 공간입니다.
 
 ---
 
 <details>
-<summary><h3>📅 2026년 7월 (July 2026)</h3></summary>
+<summary><h3>2026-07</h3></summary>
 <br>
 
 <details>
@@ -36,7 +36,7 @@
 <hr>
 
 <details>
-<summary><h3>📅 2026년 6월 (June 2026)</h3></summary>
+<summary><h3>2026-06</h3></summary>
 <br>
 
 <details>
