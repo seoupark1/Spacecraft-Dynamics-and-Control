@@ -4,7 +4,9 @@
 
 ---
 
-### 📅 2026년 7월 (July 2026)
+<details>
+<summary><h3>📅 2026년 7월 (July 2026)</h3></summary>
+<br>
 
 <details>
 <summary><b>2026-07-01: CMG 구조의 이해와 EOM 유도</b></summary>
@@ -23,9 +25,28 @@
 
 - **핵심 개념:** 파이썬 객체 지향 프로그래밍을 활용한 우주선 `Attitude` 클래스 설계
 - **세부 내용:**
-  - 부동소수점 오차 방지를 위한 `max()` 및 `np.sqrt()` 클리핑(Clipping) 기법
+  - 부동소수점 오차 방지를 위한 `max()` 및 `np.sqrt()` 클리핑 기법
   - 팩토리 메서드(`@classmethod`)를 활용한 아키텍처 설계
-  - `tilde_matrix` 등 수학 유틸리티 함수의 모듈화(Packaging) 기법
 - 🔗 [상세 문서 보러가기](./2026-07-03-Attitude-Class.md)
+
+</details>
+
+</details>
+
+<hr>
+
+<details>
+<summary><h3>📅 2026년 6월 (June 2026)</h3></summary>
+<br>
+
+<details>
+<summary><b>2026-06-25: 수치 적분과 Runge-Kutta 4th Order</b></summary>
+<br>
+
+- **핵심 개념:** RK4를 활용한 궤도 역학 시뮬레이션
+- **세부 내용:** 파이썬을 이용한 ODE 풀이 기초
+- 🔗 [상세 문서 보러가기](./2026-06-25-RK4.md)
+
+</details>
 
 </details>
