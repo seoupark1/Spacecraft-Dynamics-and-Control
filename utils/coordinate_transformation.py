@@ -20,7 +20,7 @@ class Attitude:
     def from_ea321(cls, euler_angles_deg):
         # deg to rad
         euler_angles_rad = np.radians(euler_angles_deg)
-        theta1, theta2, theta3 = euler_angles_rad
+        theta1, theta2, theta3 = euler_angles_rad.flatten()
 
         # refactoring
         c1, s1 = np.cos(theta1), np.sin(theta1)
@@ -55,7 +55,7 @@ class Attitude:
     def from_ea313(cls, euler_angles_deg):
         # deg to rad
         euler_angles_rad = np.radians(euler_angles_deg)
-        theta1, theta2, theta3 = euler_angles_rad
+        theta1, theta2, theta3 = euler_angles_rad.flatten()
 
         # refactoring
         c1, s1 = np.cos(theta1), np.sin(theta1)
@@ -68,7 +68,7 @@ class Attitude:
         
         return cls(dcm)
     
-    @classmethod
+    @staticmethod
     # Directional Cosine Matrix to (3-1-3) Euler Angles
     def dcm_to_ea313(dcm):
         # allocate parameters
@@ -89,7 +89,7 @@ class Attitude:
     # Quaternions to Directional Cosine Matrix
     def from_ep(cls, euler_parameters):
         # allocate parameters (b0 is a scalar part)
-        b0, b1, b2, b3 = euler_parameters
+        b0, b1, b2, b3 = euler_parameters.flatten()
 
         dcm = np.array([[b0**2 + b1**2 - b2**2 - b3**2,  2*(b1*b2 + b0*b3), 2*(b1*b3 - b0*b2)],
                         [2*(b1*b2 - b0*b3), b0**2 - b1**2 + b2**2 - b3**2,  2*(b2*b3 + b0*b1)],
@@ -111,25 +111,25 @@ class Attitude:
         max_index = np.argmax(b_square)
 
         if max_index == 0:
-            b0 = np.sqrt(b0_square)
+            b0 = np.sqrt(max(0, b0_square))
             b1 = (dcm[1,2] - dcm[2,1]) / (4 * b0)
             b2 = (dcm[2,0] - dcm[0,2]) / (4 * b0)
             b3 = (dcm[0,1] - dcm[1,0]) / (4 * b0)
 
         elif max_index == 1:
-            b1 = np.sqrt(b1_square)
+            b1 = np.sqrt(max(0, b1_square))
             b0 = (dcm[1,2] - dcm[2,1]) / (4 * b1)
             b2 = (dcm[0,1] + dcm[1,0]) / (4 * b1)
             b3 = (dcm[2,0] + dcm[0,2]) / (4 * b1)
 
         elif max_index == 2:
-            b2 = np.sqrt(b2_square)
+            b2 = np.sqrt(max(0, b2_square))
             b0 = (dcm[2,0] - dcm[0,2]) / (4 * b2)
             b1 = (dcm[0,1] + dcm[1,0]) / (4 * b2)
             b3 = (dcm[1,2] + dcm[2,1]) / (4 * b2)
 
         elif max_index == 3:
-            b3 = np.sqrt(b3_square)
+            b3 = np.sqrt(max(0, b3_square))
             b0 = (dcm[0,1] - dcm[1,0]) / (4 * b3)
             b1 = (dcm[2,0] + dcm[0,2]) / (4 * b3)
             b2 = (dcm[1,2] + dcm[2,1]) / (4 * b3)
@@ -156,8 +156,8 @@ class Attitude:
     @staticmethod
     # Directional Cosine Matrix to CLassical Rodrigues Parameters
     def dcm_to_crp(dcm):
-        zeta = np.sqrt(1 + np.trace(dcm))
-        q = np.array([dcm[1,2] - dcm[2,1], dcm[2,0] - dcm[0,2], dcm[0,1] - dcm[1,0]]).reshape(3,1) / zeta**2
+        zeta_square = 1 + np.trace(dcm)
+        q = np.array([dcm[1,2] - dcm[2,1], dcm[2,0] - dcm[0,2], dcm[0,1] - dcm[1,0]]).reshape(3,1) / zeta_square
 
         return q
     
