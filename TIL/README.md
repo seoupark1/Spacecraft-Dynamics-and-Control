@@ -1,8 +1,5 @@
 # TIL (Today I Learned)
 
-
-## 🚀 GNC & Python TIL Repository
-
 이 저장소는 우주선 자세 제어(Attitude Control) 역학과 파이썬 비행 소프트웨어 아키텍처 학습 기록을 담고 있습니다.
 
 ---
