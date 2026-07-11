@@ -1,6 +1,7 @@
 # TIL (Today I Learned)
 
 이 페이지는 당일 학습한 내용들 중에서 가장 인상 깊게 다가온 깨달음을 정리한 공간입니다.
+<br>
 각 파일은 Theory, Code Implementation, Architecture & Workflow의 3가지 분류로 나누어져 있습니다.
 
 ---
